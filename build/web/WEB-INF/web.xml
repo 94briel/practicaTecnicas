@@ -29,6 +29,14 @@
         <servlet-name>AdminPersonaRegistrada</servlet-name>
         <url-pattern>/inicio_sesion</url-pattern>
     </servlet-mapping>
+        <servlet>
+        <servlet-name>AdminTelefono</servlet-name>
+        <servlet-class>servlets.AdminTelefono</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminTelefono</servlet-name>
+        <url-pattern>/pago</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
