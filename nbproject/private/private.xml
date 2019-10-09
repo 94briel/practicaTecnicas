@@ -3,14 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/lib/bootstrap/css/bootstrap.css</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/index.html</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/contactform/contactform.js</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/lib/font-awesome/css/font-awesome.css</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/lib/font-awesome/css/font-awesome.min.css</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/css/style.css</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/web/lib/bootstrap/css/bootstrap.min.css</file>
-            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStore27Sep/nbproject/ant-deploy.xml</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/db/DB.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/css/style.css</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/models/Persona.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/models/TelefonoDAO.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/cosasinutiles/registro.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/servlets/AdminPersona.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/index.html</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/inscribir.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/css/stylecat.css</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/cosasinutiles/header.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/models/Telefono.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/models/PersonaDAO.java</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/catalogo.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/web/cosasinutiles/footer.jsp</file>
+            <file>file:/C:/Users/gabri/Documents/NetBeansProjects/GabrielStoreOct3/src/java/servlets/AdminTelefono.java</file>
         </group>
     </open-files>
 </project-private>
