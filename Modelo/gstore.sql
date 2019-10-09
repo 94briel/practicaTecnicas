@@ -18,6 +18,36 @@ USE `gstore`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `pago`
+--
+
+DROP TABLE IF EXISTS `pago`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pago` (
+  `id_compra` int(11) NOT NULL,
+  `nombre_cliente` varchar(64) DEFAULT NULL,
+  `id_cliente` varchar(11) DEFAULT NULL,
+  `nombre_cel` varchar(32) NOT NULL,
+  `precio_cel` double NOT NULL,
+  `descuento` double DEFAULT NULL,
+  `total` double NOT NULL,
+  `tarjeta` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_compra`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pago`
+--
+
+LOCK TABLES `pago` WRITE;
+/*!40000 ALTER TABLE `pago` DISABLE KEYS */;
+INSERT INTO `pago` VALUES (1,'Gabriel Garcia','123','iPhone X',2345677,0,2345677,'12345678901234567890');
+/*!40000 ALTER TABLE `pago` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `persona`
 --
 
@@ -40,7 +70,7 @@ CREATE TABLE `persona` (
 
 LOCK TABLES `persona` WRITE;
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES ('','','','',''),('123','Gabriel','Garcia','gabriel@gmail.com','gabrieljajasaludos'),('45342121','German','Granados','german.granados@hotmail.com','germangranados'),('5789','Jose','Restrepo','eljose@udea.com','jose57890'),('root','root','root','root','root'),('rr','frfrff','rfr','frfr','rr');
+INSERT INTO `persona` VALUES ('123','Gabriel','Garcia','gabriel@gmail.com','gabrieljajasaludos'),('32355643','Mireya','Lopez','mire.lopez@hotmail.com','mireya'),('45342121','German','Granados','german.granados@hotmail.com','germangranados'),('5789','Jose','Restrepo','eljose@udea.com','jose57890'),('root','root','root','root','root');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,4 +112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-08 23:49:28
+-- Dump completed on 2019-10-09  1:15:09
