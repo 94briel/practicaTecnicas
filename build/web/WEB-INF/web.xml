@@ -29,7 +29,7 @@
         <servlet-name>AdminPersonaRegistrada</servlet-name>
         <url-pattern>/inicio_sesion</url-pattern>
     </servlet-mapping>
-        <servlet>
+    <servlet>
         <servlet-name>AdminTelefono</servlet-name>
         <servlet-class>servlets.AdminTelefono</servlet-class>
     </servlet>
@@ -37,6 +37,22 @@
         <servlet-name>AdminTelefono</servlet-name>
         <url-pattern>/pago</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminPago</servlet-name>
+        <servlet-class>servlets.AdminPago</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminPago</servlet-name>
+        <url-pattern>/compra</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminIngresarCelular</servlet-name>
+        <servlet-class>servlets.AdminIngresarCelular</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminIngresarCelular</servlet-name>
+        <url-pattern>/ingresar_cel</url-pattern>
+    </servlet-mapping> 
     <session-config>
         <session-timeout>
             30
