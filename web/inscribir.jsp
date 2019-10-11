@@ -2,6 +2,7 @@
 <link href="css/stylecat.css" rel="stylesheet">
 <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="img/favicon.png" rel="icon">
 <%-- 
     Document   : inscribir
     Created on : Oct 6, 2019, 5:42:21 PM
@@ -21,7 +22,7 @@
 %></h2>
     <h1>¿Todavía no se ha registrado? Por favor, introduzca los siguientes datos.</h1>
     <form action="./registro_usuario" method="POST" onsubmit="return registro()">
-        Identificación *: <input type="text" name="id" placeholder="Número de identificación"/>
+        Identificación * : <input type="text" name="id" placeholder="Número de identificación"/>
         <br />
         <br />
         Primer nombre: <input type="text" name="nombre" placeholder="Nombre"/>
@@ -30,10 +31,10 @@
         Primer apellido: <input type="text" name="apellido" placeholder="Apellido"/>
         <br />
         <br />
-        Correo electrónico *: <input type="text" name="correo" placeholder="Correo electrónico" size="33"/>
+        Correo electrónico * : <input type="text" name="correo" placeholder="ejemplo@gabrielsstore.com" size="33"/>
         <br />
         <br />
-        Contraseña *: <input type="password" name="contrasena" placeholder="Contraseña que desea asignar" size="27"/>
+        Contraseña * : <input type="password" name="contrasena" placeholder="Contraseña que desea asignar" size="27"/>
         <br />
         <br />        
         <input type="submit" value="Registrarse" name="registro" />
