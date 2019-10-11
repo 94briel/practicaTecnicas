@@ -56,7 +56,7 @@
             <b>Precio del celular:</b>
             <%
                 if (null != request.getAttribute("preciocel")) {
-                    out.print(String.format("%1$,.3f",request.getAttribute("preciocel")));
+                    out.print(String.format("%1$,.3f", request.getAttribute("preciocel")));
                 } else {
                     out.print("Sin precio");
                 }%>
@@ -122,7 +122,8 @@
             <br/>
             <iframe name="pagar" scrolling="no" frameborder="0"></iframe> 
             <hr/>
-            <%}catch(Exception e){}%>
+            <%} catch (Exception e) {
+                }%>
             <a href="index.html"><input type="button" value="Regresar a la página principal" name="index"/></a>
             <br/> 
             <br/> 
