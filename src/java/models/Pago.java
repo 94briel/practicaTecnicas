@@ -173,5 +173,5 @@ public class Pago implements Serializable {
     public String toString() {
         return "models.Pago[ idCompra=" + idCompra + " ]";
     }
-    
+
 }

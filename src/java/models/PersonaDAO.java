@@ -13,7 +13,6 @@ public class PersonaDAO {
     public void agregar(Persona p) {
         try {
             conn = conexion.getConexion();
-            System.out.println("jaja por fin");
             String query = "INSERT INTO persona (id, primer_nombre, primer_apellido, correo, contrasena) values (?, ?, ?, ?, ?)";
             ps = conn.prepareStatement(query);
             ps.setString(1, p.getId());
@@ -21,7 +20,6 @@ public class PersonaDAO {
             ps.setString(3, p.getPrimerApellido());
             ps.setString(4, p.getCorreo());
             ps.setString(5, p.getContrasena());
-
             ps.executeUpdate();
             System.out.println("Persona ha sido inscrita");
         } catch (Exception e) {
@@ -46,12 +44,11 @@ public class PersonaDAO {
             while (rs.next()) {
                 idBD = rs.getString("id");
                 passBD = rs.getString("contrasena");
-                if(idBD.equals(null) || idBD.equals("") || passBD.equals(null) || passBD.equals("")){
+                if (idBD.equals(null) || idBD.equals("") || passBD.equals(null) || passBD.equals("")) {
                     return 0;
-                }else if(idBD.equals("root") && passBD.equals("root"))
-                {
+                } else if (idBD.equals("root") && passBD.equals("root")) {
                     return 2;
-                }else{
+                } else {
                     return 1;
                 }
             }
@@ -67,25 +64,24 @@ public class PersonaDAO {
         }
         return 0;
     }
-    
-        public String obtenerNombre(String id, String pass) {
+
+    public String obtenerNombre(String id) {
         String nombreBD = null;
         String apellidoBD = null;
         try {
             conn = conexion.getConexion();
             System.out.println("jaja por fin");
-            String query = "SELECT primer_nombre, primer_apellido FROM persona where id ='" + id + "' and contrasena ='" + pass + "'";
+            String query = "SELECT primer_nombre, primer_apellido FROM persona where id ='" + id + "'";
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery(query);
             while (rs.next()) {
                 nombreBD = rs.getString("primer_nombre");
                 apellidoBD = rs.getString("primer_apellido");
-                if(nombreBD.equals(null) || nombreBD.equals("") || apellidoBD.equals(null) || apellidoBD.equals("")){
+                if (nombreBD.equals(null) || nombreBD.equals("") || apellidoBD.equals(null) || apellidoBD.equals("")) {
                     return "usuario";
-                }else if(nombreBD.equals("root") && apellidoBD.equals("root"))
-                {
+                } else if (nombreBD.equals("root") && apellidoBD.equals("root")) {
                     return "administrador";
-                }else{
+                } else {
                     return nombreBD + " " + apellidoBD;
                 }
             }

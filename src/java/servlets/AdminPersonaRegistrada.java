@@ -27,21 +27,24 @@ public class AdminPersonaRegistrada extends HttpServlet {
         RequestDispatcher view;
         String i = request.getParameter("idus");
         String p = request.getParameter("passus");
+        String nombre = perDAO.obtenerNombre(i);        
         int nivel = perDAO.validar(i, p);
         switch (nivel) {
             case 2:
-                view = request.getRequestDispatcher("catalogo.jsp");
+                view = request.getRequestDispatcher("ingresoCelular.jsp");
                 request.setAttribute("mensaje", "¡Bienvenido, administrador!");
+                request.setAttribute("idcliente", i);
                 view.forward(request, response);
                 break;
             case 1:
                 view = request.getRequestDispatcher("catalogo.jsp");
-                request.setAttribute("mensaje", "¡Bienvenid@, " + perDAO.obtenerNombre(i, p) + "!");
+                request.setAttribute("mensaje", "¡Bienvenid@, " + nombre + "!");
+                request.setAttribute("idcliente", i);
                 view.forward(request, response);
                 break;
             default:
                 view = request.getRequestDispatcher("inscribir.jsp");
-                request.setAttribute("mensaje", "El usuario no se encuentra registrado. Por favor, regístrese.");
+                request.setAttribute("mensaje", "El usuario no se encuentra registrado o ha ingresado incorrectamente los datos.");
                 view.forward(request, response);
                 break;
         }

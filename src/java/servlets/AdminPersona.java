@@ -29,25 +29,26 @@ public class AdminPersona extends HttpServlet {
         String a = request.getParameter("apellido");
         String c = request.getParameter("correo");
         String p = request.getParameter("contrasena");
-        if (i.length()> 11 || i.equals("") || i.equals(null) || p.equals("") || p.equals(null) || c.equals("") 
+        if (i.length() > 11 || i.equals("") || i.equals(null) || p.equals("") || p.equals(null) || c.equals("")
                 || c.equals(null) || !c.contains("@") || !c.contains(".")) {
-        RequestDispatcher view = request.getRequestDispatcher("inscribir.jsp");
-        request.setAttribute("mensaje", "¡Por favor, introduzca correctamente los datos marcados con asterisco (*)!");
-        view.forward(request, response);
-        }else{
-        per.setId(i);
-        per.setPrimerNombre(n);
-        per.setPrimerApellido(a);
-        per.setCorreo(c);
-        per.setContrasena(p);
-        perDAO.agregar(per);
-        RequestDispatcher view = request.getRequestDispatcher("catalogo.jsp");
-        if (n.equals("") || n.equals(null) || a.equals("") || a.equals(null)) {
-            n = "cliente";
-            a = "nuevo";
-        }
-        request.setAttribute("mensaje", "¡Bienvenid@, " + n + " " + a + "!");
-        view.forward(request, response);
+            RequestDispatcher view = request.getRequestDispatcher("inscribir.jsp");
+            request.setAttribute("mensaje", "¡Por favor, introduzca correctamente los datos marcados con asterisco (*)!");
+            view.forward(request, response);
+        } else {
+            per.setId(i);
+            per.setPrimerNombre(n);
+            per.setPrimerApellido(a);
+            per.setCorreo(c);
+            per.setContrasena(p);
+            perDAO.agregar(per);
+            RequestDispatcher view = request.getRequestDispatcher("catalogo.jsp");
+            if (n.equals("") || n.equals(null) || a.equals("") || a.equals(null)) {
+                n = "cliente";
+                a = "nuevo";
+            }
+            request.setAttribute("idcliente", i);
+            request.setAttribute("mensaje", "¡Bienvenid@, " + n + " " + a + "!");
+            view.forward(request, response);
         }
     }
 }
